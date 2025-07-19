@@ -3,10 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md Zihadul Islam </title>
+  <title>Md Zihadul Islam</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .menu-container {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .menu-btn {
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      margin-top: 10px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      min-width: 160px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ✅ Three Dot Menu -->
+  <div class="menu-container">
+    <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+    <div id="dropdown-menu" class="dropdown-content">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Presentation</a>
+       
+      <a href="#contact">Achievements</a>
+      <a href="#contact">Contact</a>
+      <a href="#follow">Social</a>
+    </div>
+  </div>
+
+  <!-- ✅ Header -->
   <header>
     <div class="center-img">
      <img src="hhtml.jpg" alt="Profile Picture" style="width:100%;max-width:400px;height:auto;border-radius:10px;"/>
@@ -15,14 +71,15 @@
     <p>Robotics & IoT Enthusiast</p>
   </header>
 
-  <section>
+  <!-- ✅ About Section -->
+  <section id="about">
     <h2>About Me</h2>
     <p>I am a first-year EEE student at Islamic University, Kushtia. I love working on IoT, Arduino, and robotics. I'm passionate about building smart solutions using electronics and programming.</p>
-  
   </section>
-  
-<section>
-<h2 style="color:blue;">Projects</h2>
+
+  <!-- ✅ Projects Section (Updated with ID) -->
+  <section id="projects">
+    <h2 style="color:blue;">Projects</h2>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
     
     <div>
@@ -50,8 +107,10 @@
  
     </div>
  </div>
-</section>
-<section>
+  </section>
+  <!-- ✅ CPresentation Section -->
+   
+   <section>
 <h2 style="color:blue;">Presentation</h2>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
     
@@ -100,6 +159,7 @@
 
   
 </section>
+ <!-- ✅ CAhievements Section -->
   <section>
     
     <h2 style="color:blue;">Achievements</h2>
@@ -298,28 +358,16 @@
   
   </section>
 
-  <section>
-   
- <h2>Projects</h2>
-    <ul>
-      <li>🔧 Smart Dustbin using Arduino</li>
-      <img src="dustbin.jpg" alt="Smart Dustbin"/>
-      <li>💡 Home Automation with ESP8266</li>
-      <li>📡 Weather Monitoring System using Sensors</li>
-    </ul>
-    </section>
-  <section>
-    <h2>Image</h2>
-    <img src="alpha21.jpg" alt="Alpha 21 Robot" width="200"/>
+  <!-- ✅ Contact Section -->
+  <section id="contact">
+    <h2 style="color:blue;">Contact</h2>
+    <p>💌: mdzihad0132@gmail.com</p>
+    <p>📱: 01887039083</p>
+    <p>🏠: Feni Sadar Feni</p>
   </section>
 
-  <section>
-  <h2 style="color:blue;">Contact</h2>
-    <p>💌:mdzihad0132@gmail.com</p>
-    <p>📱:01887039083</p>
-    <p>🏠:Feni Sadar Feni</p>
-  </section>
-  <section>
+  <!-- ✅ Social Links -->
+   <section>
     <head>
   <title>Social Links</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -344,9 +392,27 @@
 
   </section>
 
+  <!-- ✅ Footer -->
   <footer>
     <p>© 2024 Copyright:</p>
     <p>Md Zihadul Islam , All Rights Reserved</p>
   </footer>
+
+  <!-- ✅ JavaScript for Dropdown -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdown-menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.menu-btn')) {
+        const dropdown = document.getElementById("dropdown-menu");
+        if (dropdown && dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 </html>
