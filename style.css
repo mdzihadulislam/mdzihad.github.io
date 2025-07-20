@@ -11,11 +11,34 @@ header {
   padding: 30px 0;
   text-align: center;
 }
-section img {
-  border-bottom: 2px solid #444;
-  padding-bottom: 5px;
+.pro-image-box {
+  width: 300px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.pro-image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+}
+
+.pro-image-box img {
+  width: 100%;
   display: block;
-  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.img-caption {
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  background-color: #fafafa;
 }
 section {
   background: white;
