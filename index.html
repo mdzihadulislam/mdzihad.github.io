@@ -1,94 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Navbar</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .navbar .home {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .menu-icon {
-      font-size: 26px;
-      cursor: pointer;
-      display: block;
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 55px;
-      right: 20px;
-      background-color: #444;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    .dropdown a {
-      display: block;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: white;
-    }
-
-    .dropdown a:hover {
-      background-color: #555;
-    }
-
-    @media (min-width: 768px) {
-      .menu-icon {
-        display: none;
-      }
-
-      .dropdown {
-        display: flex;
-        position: static;
-        background: none;
-        flex-direction: row;
-        gap: 20px;
-      }
-
-      .dropdown a {
-        padding: 0;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="home">Home</div>
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <div class="dropdown" id="dropdownMenu">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#presentation">Presentation</a>
-           <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-  <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -104,18 +15,14 @@
     <p>Robotics & IoT Enthusiast</p>
   </header>
 
-
-  <!-- Dummy content -->
-  <div style="padding: 20px;">
-    <h2 id="about">About</h2>
-    <section>
-    
-    <p>I am a first-year EEE student at Islamic University, Kushtia. I love working on IoT, Arduino, and robotics. I'm passionate about building smart solutions using electronics and programming</p>
-   </section>
-  <!-- Dummy content -->
-  <div style="padding: 20px;">
-    <h2 id="projects">Projects</h2>
-    <section>
+  <section>
+    <h2>About Me</h2>
+    <p>I am a first-year EEE student at Islamic University, Kushtia. I love working on IoT, Arduino, and robotics. I'm passionate about building smart solutions using electronics and programming.</p>
+  
+  </section>
+  
+<section>
+<h2 style="color:blue;">Projects</h2>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
     
     <div>
@@ -144,12 +51,8 @@
     </div>
  </div>
 </section>
-
-  <!-- Dummy content -->
-  <div style="padding: 20px;">
-    <h2 id="Presentation">Presentation</h2>
 <section>
-
+<h2 style="color:blue;">Presentation</h2>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
     
     <div>
@@ -200,14 +103,10 @@
 
   
 </section>
-
-  <!-- Dummy content -->
-  <div style="padding: 20px;">
-    <h2 id="achievements">Achievements</h2>
-  
-    <section>
+  <section>
     
-   
+    <h2 style="color:blue;">Achievements</h2>
+    
     
      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
          <div>
@@ -401,22 +300,29 @@
              </div>
   
   </section>
-  
-  <!-- Dummy content -->
-  <div style="padding: 20px;">
 
-    <h2 id="contact">Contact Section</h2>
-    
   <section>
-  
+   
+ <h2>Projects</h2>
+    <ul>
+      <li>🔧 Smart Dustbin using Arduino</li>
+      <img src="dustbin.jpg" alt="Smart Dustbin"/>
+      <li>💡 Home Automation with ESP8266</li>
+      <li>📡 Weather Monitoring System using Sensors</li>
+    </ul>
+    </section>
+  <section>
+    <h2>Image</h2>
+    <img src="alpha21.jpg" alt="Alpha 21 Robot" width="200"/>
+  </section>
+
+  <section>
+  <h2 style="color:blue;">Contact</h2>
     <p>💌:mdzihad0132@gmail.com</p>
     <p>📱:01887039083</p>
     <p>🏠:Feni Sadar Feni</p>
-    </section>
- 
-  <!-- Dummy content -->
-  <div style="padding: 20px;">
- <section>
+  </section>
+  <section>
     <head>
   <title>Social Links</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -440,17 +346,10 @@
 </body>
 
   </section>
-   <footer>
+
+  <footer>
     <p>© 2024 Copyright:</p>
     <p>Md Zihadul Islam , All Rights Reserved</p>
   </footer>
-  <!-- Script -->
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("dropdownMenu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-  </script>
-
 </body>
 </html>
