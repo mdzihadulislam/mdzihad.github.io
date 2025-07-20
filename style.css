@@ -1,69 +1,96 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  background: #f4f4f4;
   color: #333;
 }
+
 header {
-  background:#ffffff;
-  color: black;
-  padding: 30px 0;
   text-align: center;
-}
-section-image-box {
-  width: 300px;
-  margin: 40px auto;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  text-align: center;
+  background: #ffffff;
+  padding: 40px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-section-image-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
-}
-
-section-image-box img {
+header img {
   width: 100%;
-  display: block;
-  border-bottom: 1px solid #eee;
+  max-width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-section img-caption {
-  padding: 15px;
-  font-size: 16px;
-  color: #333;
-  font-weight: 500;
-  background-color: #fafafa;
+h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
 }
+
+p {
+  font-size: 1.1rem;
+}
+
 section {
-  background: white;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 1300px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
-h1, h2 {
+
+h2 {
+  text-align: center;
+  color: #007acc;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+div img {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin-bottom: 10px;
 }
+
+section .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  text-align: center;
+}
+
 ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  text-align: center;
 }
+
 ul li {
-  padding: 5px 0;
+  margin: 10px 0;
+  font-size: 1.1rem;
 }
+
 a {
-  color: #004080;
   text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
 }
+
+a:hover {
+  color: #005f99;
+}
+
 footer {
   text-align: center;
-  padding: 10px;
-  background: #ddd;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.social-icons i {
+  font-size: 35px;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
 }
