@@ -11,6 +11,12 @@ header {
   padding: 30px 0;
   text-align: center;
 }
+section img {
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+  display: block;
+  margin-bottom: 10px;
+}
 section {
   background: white;
   padding: 20px;
