@@ -3,51 +3,63 @@ body {
   background: #f2f2f2;
   margin: 0;
   padding: 0;
-  font-family:sans-serif;
-  overflow-x:hidden;
+  overflow-x: hidden;
   color: #333;
 }
+
 .container {
   max-width: 100%;
   padding: 20px;
-  box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 header {
-  background:#ffffff;
+  background: #ffffff;
   color: black;
   padding: 30px 0;
   text-align: center;
 }
+
 section img {
   border-bottom: 2px solid #444;
   padding-bottom: 5px;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  height: auto;
 }
+
 section {
   background: white;
   padding: 20px;
   margin: 20px auto;
-  max-width: 1300px;
+  width: 95%; /* মোবাইলে সুন্দর দেখাবে */
+  max-width: 800px; /* ডেক্সটপে সীমা */
   border-radius: 10px;
   box-shadow: 0 0 10px #ccc;
+  box-sizing: border-box;
 }
+
 h1, h2 {
   margin-bottom: 10px;
 }
+
 ul {
   list-style: none;
   padding-left: 0;
 }
+
 ul li {
   padding: 5px 0;
 }
+
 a {
   color: #004080;
   text-decoration: none;
 }
+
 footer {
   text-align: center;
   padding: 10px;
-  background: #ddd;
+  background: #ddd;
 }
