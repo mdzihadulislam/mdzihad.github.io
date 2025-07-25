@@ -1,74 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-  <style>
-    .boxed-image {
-      border: 2px solid black; 
-      padding: 5px;         
-      width: 325px;    
-    border-radius:8px;
-  </style>
-  <head>
+<!DOCTYPE html><html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md Zihadul Islam </title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Md Zihadul Islam</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin-bottom: 10px;
+  }
+}
+
+.boxed-image {
+  border: 2px solid black;
+  padding: 5px;
+  width: 325px;
+  border-radius: 8px;
+}
+
+  </style>
 </head>
-<body>
-  <header>
+<body>  <nav class="navbar">
+    <div class="navbar-logo">Md Zihad</div>
+    <div class="navbar-toggle" onclick="toggleNavbar()">☰</div>
+    <ul class="navbar-menu" id="navbarMenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#presentation">Presentation</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>  <header id="home">
     <div class="center-img">
-     <img src="hhtml.jpg" alt="Profile Picture" style="width:100%;max-width:400px;height:auto;border-radius:10px;"/>
-     </div>
+      <img src="hhtml.jpg" alt="Profile Picture" style="width:100%;max-width:400px;height:auto;border-radius:10px;" />
+    </div>
     <h1>Md Zihadul Islam</h1>
     <p>Robotics & IoT Enthusiast</p>
-  </header>
-
-  <section>
+  </header>  <section>
     <h2>About Me</h2>
     <p>I am a dedicated and curious student passionate about innovation and solving practical problems. Working with electrical devices and systems gives me great satisfaction. I enjoy understanding how things work, taking systems apart, and creating new solutions to real-world challenges.<br>
-
-Since childhood, I have participated in various science Olympiads like Physics, Math, and IT. Though I enjoy these intellectual challenges, my true passion is robotics, electronics, and technology innovation. I have completed several IT and IoT projects, always seeking ways to improve efficiency and quality of life.<br>
-
-What drives me most is creating something new—whether designing smart sensor systems, automating processes with Arduino, or solving robotics challenges. I love soldering wires, coding circuits, and working late—not out of duty, but genuine interest.<br>
-
-My goal is to become a multidisciplinary engineer who applies theory effectively to make a positive impact. I am committed to continuous learning and inspiring others to innovate with me.</p>
-  
-  </section>
-  
-<section>
-<h2 style="color:blue;">Projects</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;"/>
-    
+    Since childhood, I have participated in various science Olympiads like Physics, Math, and IT. Though I enjoy these intellectual challenges, my true passion is robotics, electronics, and technology innovation. I have completed several IT and IoT projects, always seeking ways to improve efficiency and quality of life.<br>
+    What drives me most is creating something new—whether designing smart sensor systems, automating processes with Arduino, or solving robotics challenges. I love soldering wires, coding circuits, and working late—not out of duty, but genuine interest.<br>
+    My goal is to become a multidisciplinary engineer who applies theory effectively to make a positive impact. I am committed to continuous learning and inspiring others to innovate with me.</p>
+  </section>  <section id="projects">
+    <h2 style="color:blue;">Projects</h2>
     <div>
       <h3>Humanoid Medical Robot-71</h3>
-     <img src="MedicalRobot.jpg" alt="MedicalRobot.jpg" width="350" height="400"/>
-
+      <img src="MedicalRobot.jpg" alt="MedicalRobot" width="350" height="400" class="boxed-image"/>
       <p>This is a Humanoid Medical Robot-71,<br>  specifically designed to deliver healthcare services to patients<br> autonomously, without the direct involvement of a doctor.
 </p>
- <a href="https://youtu.be/oVUG3B_AB6I?si=DJuMH4Zz1csJnQAp" target="_blank">
- Humanoid medical Robot Video 🔗
-</a>
+      <a href="https://youtu.be/oVUG3B_AB6I?si=DJuMH4Zz1csJnQAp" target="_blank">Watch Video 🔗</a>
     </div>
-
     <div>
       <h3>Alpha-21 Medical & Homey Robot</h3>
-     <img src="Alpharobot.jpg" alt="Alpharobot" width="350" height="400"/> 
+      <img src="Alpharobot.jpg" alt="AlphaRobot" width="350" height="400" class="boxed-image"/>
       <p>This is a Alpha-21 an artificial intelligence robot.
       <br>This artificial intelligence robot has been designed <br>to streamline various tasks
-      in both the medical sector<br> and domestic environments
-       
-      </p>
-       <a href="https://www.facebook.com/share/v/14EDrjV63UP/" target="_blank">
- Alpha-21 Robot video🔗
-  </a>
- 
+      in both the medical sector<br> and domestic environments</p>
+      <a href="https://www.facebook.com/share/v/14EDrjV63UP/" target="_blank">Watch Video 🔗</a>
     </div>
- </div>
-</section>
-<section>
-<h2 style="color:blue;">Presentation</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
-    
-    <div>
+  </section>  <section id="presentation">
+    <h2 style="color:blue;">Presentation</h2>
+     <div>
       <img src="BIG1.png" alt="BIG 1" width="600" class="boxed-image"/>
       <p>Live Stage</p>
     </div>
@@ -115,14 +165,9 @@ My goal is to become a multidisciplinary engineer who applies theory effectively
   </div>
 
   
-</section>
-  <section>
-    
+  </section>  <section id="achievements">
     <h2 style="color:blue;">Achievements</h2>
-    
-    
-     <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
-         <div>
+    <div>
       <p>🎖2nd Place-BNMPC National Science Carnival 2021</p>
        <img src="BNMPC.jpg" alt="BNMPC.jpg" width="350" height="400" class="boxed-image"/>
        
@@ -311,53 +356,28 @@ My goal is to become a multidisciplinary engineer who applies theory effectively
                   <img src="bif.jpg" alt="bif" width="350" class="boxed-image"/>         
                </div>
              </div>
-  
-  </section>
-
-  <section>
-   
- <h2>Projects</h2>
-    <ul>
-      <li>🔧 Smart Dustbin using Arduino</li>
-      <img src="dustbin.jpg" alt="Smart Dustbin"/>
-      <li>💡 Home Automation with ESP8266</li>
-      <li>📡 Weather Monitoring System using Sensors</li>
-    </ul>
-    </section>
-
-  <section>
-  <h2 style="color:blue;">Contact</h2>
-    <p>💌:mdzihad0132@gmail.com</p>
-    <p>📱:01887039083</p>
-    <p>🏠:Feni Sadar Feni</p>
-    <head>
-  <title>Social Links</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body style="text-align: center; margin-top: 50px;">
-
-  <h2>Follow Me</h2>
-
-  <a href="https://www.facebook.com/yourprofile" target="_blank">
-    <i class="fab fa-facebook" style="font-size: 40px; color: #3b5998; margin: 10px;"></i>
-  </a>
-
-  <a href="https://www.instagram.com/mdzihad0132?igsh=MWpqY25kMjd4cGhnNw=="target="_blank">
-    <i class="fab fa-instagram" style="font-size: 40px; color: #e1306c; margin: 10px;"></i>
-  </a>
-
-  <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-    <i class="fab fa-linkedin" style="font-size: 40px; color: #0e76a8; margin: 10px;"></i>
-  </a>
-
-</body>
-
-  </section>
- 
-
-  <footer>
+  </section>  <section id="contact">
+    <h2 style="color:blue;">Contact</h2>
+    <p>💌 mdzihad0132@gmail.com</p>
+    <p>📱 01887039083</p>
+    <p>🏠 Feni Sadar, Feni</p>
+    <h2>Follow Me</h2>
+    <a href="https://www.facebook.com/yourprofile" target="_blank">
+      <i class="fab fa-facebook" style="font-size: 40px; color: #3b5998; margin: 10px;"></i>
+    </a>
+    <a href="https://www.instagram.com/mdzihad0132" target="_blank">
+      <i class="fab fa-instagram" style="font-size: 40px; color: #e1306c; margin: 10px;"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+      <i class="fab fa-linkedin" style="font-size: 40px; color: #0e76a8; margin: 10px;"></i>
+    </a>
+  </section>  <footer>
     <p>© 2024 Copyright:</p>
-    <p>Md Zihadul Islam , All Rights Reserved</p>
-  </footer>
-</body>
+    <p>Md Zihadul Islam, All Rights Reserved</p>
+  </footer>  <script>
+    function toggleNavbar() {
+      const menu = document.getElementById("navbarMenu");
+      menu.classList.toggle("show");
+    }
+  </script></body>
 </html>
